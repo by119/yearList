@@ -1,0 +1,2154 @@
+// out: ./index.css, compress: true, libs: nib
+@spancolor: #ea0b0b;
+
+body {
+	background: #e4e4e4;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 0.37rem;
+	color: #000;
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+	// background-size: 100%;
+	// background-repeat: repeat-y;
+	// background-image: url('../images/bg.png');
+}
+@font-face {
+	font-family: 'numfont';
+	src: url('./../lib/numfont/numfont.eot');
+	src: url('./../lib/numfont/numfont.eot?#iefix') format('embedded-opentype'), url('./../lib/numfont/numfont.woff') format('woff'), url('./../lib/numfont/numfont.ttf') format('truetype'), url('./../lib/numfont/numfont.svg#numfont') format('svg');
+}
+
+.numfont() {
+	color: @spancolor;
+	font-family: "numfont" !important;
+	font-size: 0.5rem;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 0.53rem;
+}
+
+.page_t(@t, @s) {
+	position: absolute;
+	top: @t;
+	left: 50%;
+	font-size: @s;
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	transform: translateX(-50%);
+	opacity: 0;
+}
+
+.page_w(@t,@w, @h) {
+	position: absolute;
+	top: @t;
+	left: 50%;
+	width: @w;
+	height: @h;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	transform: translateX(-50%);
+	opacity: 0;
+}
+
+.page_c(@d, @t) {
+	transition: all 1s;
+	transition-delay: @d;
+	top: @t;
+	opacity: 1;
+}
+.swiper-container {
+	width: 10rem;
+	overflow: visible;
+}
+
+.swiper-slide {
+	width: 10rem;
+	text-align: center;
+	font-size: 18px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.img00 {
+	width: 10rem;
+	height: 10rem;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.img10 {
+	width: 10rem;
+	min-height: 6.5rem;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+/*第1页*/
+.first-slide {
+	.page1 {
+		width: 100%;
+		height: 100%;
+
+		.page1_01 {
+			position: relative;
+			z-index: 12;
+			.page1_tip {
+				.page_t(1.5rem,.32rem);
+				color: #787878;
+			}
+			.page1_title {
+				.page_w(2.13rem,8.35rem,1.35rem);
+				background-image: url('../images/page1_title.png');
+			}
+
+			.star1 {
+				.page_w(9rem,0.69rem,0.68rem);
+				background-image: url('../images/page1_star1.png');
+				left: 2rem;
+			}
+
+			.star2 {
+				.page_w(9rem,0.49rem,0.49rem);
+				left: unset;
+				right: 2rem;
+				background-image: url('../images/page1_star2.png');
+				transform: translateX(-50%) scale(.1);
+			}
+
+			.page1_t_0 {
+				.page_t(4.3rem,0.55rem);
+			}
+
+			.page1_t_1 {
+				.page_t(5.75rem,0.4rem);
+			}
+
+			.page1_w_1 {
+				.page_w(6.3rem,4.71rem,0.09rem);
+				background-image: url('../images/page1_bl_1.png');
+			}
+
+			.page1_t_2 {
+				.page_t(6.5rem,0.4rem);
+			}
+
+			.page1_w_2 {
+				.page_w(7.05rem,4.28rem,0.09rem);
+				background-image: url('../images/page1_bl_2.png');
+			}
+
+			.page1_road {
+				.page_w(8.1rem,100%,7.36rem);
+				// background-image: url('../images/page1_road.png');
+			}
+
+			.page1_point {
+				.page_w(8.5rem,7.85rem,7.75rem);
+				background-image: url('../images/page1_point.png');
+			}
+
+			.page1_yun {
+				.page_w(10rem, 8.16rem,2.25rem);
+				background-image: url('../images/page1_yun.png');
+			}
+
+			.page1_man {
+				.page_w(8rem, 6.73rem,6.23rem);
+				background-image: url('../images/page1_man.png');
+				transform: translateX(-60%);
+			}
+		}
+
+		.page1_02 {
+			position: relative;
+
+			.page1_t_3 {
+				.page_t(unset,0.4rem);
+				bottom: 1rem;
+				z-index: 13;
+			}
+
+			.page1_w_3 {
+				.page_w(unset,3.15rem,0.09rem);
+				bottom: 0.9rem;
+				background-image: url('../images/page1_bl_3.png');
+				z-index: 13;
+			}
+		}
+	}
+}
+/*第1页加载动画*/
+.first-slide.current {
+	.page1_01 {
+		.page1_tip {
+			.page_c(0s,.5rem);
+		}
+		.page1_title {
+			.page_c(.1s,1.13rem);
+		}
+
+		.star1 {
+			.page_c(2.1s,7.5rem);
+			transform: translateX(-50%)scaleY(1);
+		}
+
+		.star2 {
+			.page_c(2s,6.7rem);
+			transform: translateX(-50%) scaleY(1);
+		}
+
+		.page1_t_0 {
+			.page_c(0.3s,3.3rem);
+		}
+
+		.page1_t_1 {
+			.page_c( 0.6s,4.75rem);
+		}
+
+		.page1_w_1 {
+			.page_c( 0.7s,5.3rem);
+		}
+
+		.page1_t_2 {
+			.page_c(0.9s,5.5rem);
+		}
+
+		.page1_w_2 {
+			.page_c(1s,6.05rem);
+		}
+
+		.page1_road {
+			.page_c(1.4s,7.1rem);
+		}
+
+		.page1_yun {
+			.page_c(1.5s,9rem);
+		}
+
+		.page1_point {
+			.page_c(2s,7.5rem);
+		}
+
+		.page1_man {
+			.page_c(1.7s,7rem);
+		}
+	}
+
+	.page1_02 {
+		.page1_t_3 {
+			.page_c(2.3s,unset);
+			bottom: 2rem;
+		}
+
+		.page1_w_3 {
+			.page_c(2.4s,unset);
+			bottom: 1.9rem;
+		}
+	}
+}
+/*第2页*/
+.second-slide {
+	.page2 {
+		width: 100%;
+		height: 100%;
+
+		.page2_01 {
+			position: relative;
+
+			.page2_title {
+				.page_w( 2.13rem,7.36rem,1.36rem);
+				background-image: url('../images/page2_title.png');
+			}
+
+			.page2_t_0 {
+				.page_t(4.3rem,0.55rem);
+			}
+
+			.page2_t_1 {
+				.page_t(5.55rem,0.4rem);
+
+				span {
+					.numfont();
+				}
+			}
+
+			.page2_w_1 {
+				.page_w(6.1rem,6.95rem,0.09rem);
+				background-image: url('../images/page2_bl_1.png');
+			}
+
+			.page2_t_2 {
+				.page_t(6.3rem,0.4rem);
+			}
+
+			.page2_w_2 {
+				.page_w(6.9rem,4.28rem,0.09rem);
+				background-image: url('../images/page2_bl_2.png');
+			}
+
+			.page2_man {
+				.page_w(7.9rem,6.09rem,7.77rem);
+				background-image: url('../images/page2_man.png');
+			}
+
+			.page2_point {
+				.page_w(10.9rem,7.71rem,4.68rem);
+				background-image: url('../images/page2_point.png');
+			}
+
+			.page2_star {
+				.page_w(7.35rem,7.36rem,2.57rem);
+				background-image: url('../images/page2_star.png');
+			}
+
+			.page2_blank {
+				.page_w(7.35rem,0.48rem,0.48rem);
+				left: 80%;
+				background-image: url('../images/page2_blank.png');
+			}
+
+			.page2_red {
+				.page_w(6.85rem,0.21rem,0.21rem);
+				left: 15%;
+				background-image: url('../images/page2_red.png');
+			}
+		}
+
+		.page2_02 {}
+	}
+}
+/*第2页加载动画*/
+.second-slide.current {
+	.page2_01 {
+		.page2_title {
+			.page_c(0s,1.13rem);
+		}
+
+		.page2_t_0 {
+			.page_c(0.3s,3.3rem);
+		}
+
+		.page2_t_1 {
+			.page_c(0.6s,4.55rem);
+		}
+
+		.page2_w_1 {
+			.page_c(0.7s,5.1rem);
+		}
+
+		.page2_t_2 {
+			.page_c(0.9s,5.3rem);
+		}
+
+		.page2_w_2 {
+			.page_c(1s,5.9rem);
+		}
+
+		.page2_man {
+			.page_c(1.4s,6.9rem);
+		}
+
+		.page2_point {
+			.page_c(1.7s,9.9rem);
+		}
+
+		.page2_star {
+			.page_c(1.9s,6.35rem);
+		}
+
+		.page2_blank {
+			.page_c(2s,6.35rem);
+		}
+
+		.page2_red {
+			.page_c(2.1s,5.85rem);
+		}
+	}
+}
+/*第3页*/
+.third-slide {
+	.page3_0 {
+		width: 100%;
+		height: 100%;
+		// display: none;
+		.page3_01_0 {
+			.page3_0_title {
+				.page_w(2.13rem,7.28rem,1.36rem);
+				background-image: url('../images/page3_01_title.png');
+			}
+
+			// .page3_0_t_0 {
+			// 	.page_t(3.8rem,0.55rem);
+			// }
+            //
+			// .page3_0_t_1 {
+			// 	.page_t(5.25rem,0.4rem);
+            //
+			// 	span {
+			// 		.numfont();
+			// 	}
+			// }
+            //
+			// .page3_0_w_1 {
+			// 	.page_w(5.78rem,5.55rem, 0.09rem);
+			// 	background-image: url('../images/page3_01_bl_1.png');
+			// }
+            //
+			.page3_0_t_2 {
+				.page_t(4.5rem,0.4rem);
+			}
+
+			.page3_0_w_2 {
+				.page_w(5rem,4.23rem, 0.09rem);
+				background-image: url('../images/page3_01_bl_2.png');
+			}
+
+			.page3_0_t_3 {
+				.page_t(6rem,0.4rem);
+			}
+
+			.page3_0_w_3 {
+				.page_w(6.5rem,3.56rem, .1rem);
+				background-image: url('../images/page3_01_bl_3.png');
+			}
+
+			.page3_0_t_4 {
+				.page_t(6.8rem,0.4rem);
+
+				span {
+					.numfont();
+				}
+			}
+
+			.page3_0_w_4 {
+				.page_w(7.3rem,3.17rem, 0.09rem);
+				background-image: url('../images/page3_01_bl_4.png');
+			}
+
+			.page3_0_point {
+				.page_w(4.2rem, 7.71rem, 8.52rem);
+				background-image: url('../images/page3_01_point.png');
+			}
+
+			.page3_0_note {
+				.page_w(8.2rem, 1.52rem, 1.49rem);
+				background-image: url('../images/page3_01_note.png');
+			}
+
+			.page3_0_l_coin {
+				.page_w(8.9rem, 0.69rem, 1.47rem);
+				left: 30%;
+				background-image: url('../images/page3_01_l_coin.png');
+			}
+
+			.page3_0_r_coin {
+				.page_w(8rem, 0.57rem, 1.2rem);
+				left: 70%;
+				background-image: url('../images/page3_01_r_coin.png');
+			}
+
+			.page3_0_c_coin {
+				.page_w(10.2rem, 6.88rem, 3.4rem);
+				left: 55%;
+				background-image: url('../images/page3_01_c_coin.png');
+			}
+		}
+
+		.page3_02_0 {
+			position: relative;
+
+			.page3_0_t_5 {
+				position: absolute;
+				bottom: 1.75rem;
+				left: 50%;
+				font-size: 0.4rem;
+				display: inline-block;
+				white-space: nowrap;
+				overflow: hidden;
+				transform: translateX(-50%);
+				opacity: 0;
+			}
+
+			.page3_0_w_5 {
+				.page_w(unset,5.55rem, 0.09rem);
+				bottom: 1.68rem;
+				background-image: url('../images/page3_01_bl_5.png');
+			}
+
+			.page3_0_t_6 {
+				position: absolute;
+				bottom: 1.1rem;
+				left: 50%;
+				font-size: 0.4rem;
+				display: inline-block;
+				white-space: nowrap;
+				overflow: hidden;
+				transform: translateX(-50%);
+				opacity: 0;
+			}
+
+			.page3_0_w_6 {
+				.page_w(unset,4.23rem, 0.09rem);
+				bottom: 0.95rem;
+				background-image: url('../images/page3_01_bl_6.png');
+			}
+		}
+	}
+
+	.page3_1 {
+		width: 100%;
+		height: 100%;
+		display: none;
+
+		.page3_01_1 {
+			.page3_1_title {
+				.page_w(2.13rem,6.47rem,1.27rem);
+				background-image: url('../images/page3_02_title.png');
+			}
+
+			.page3_1_t_0 {
+				.page_t(3.89rem,0.4rem);
+			}
+
+			.page3_1_w_0 {
+				.page_w(4.45rem,1.87rem,0.09rem);
+				background-image: url('../images/page3_02_bl_1.png');
+			}
+
+			.page3_1_t_1 {
+				.page_t(4.65rem,0.4rem);
+			}
+
+			.page3_1_w_1 {
+				.page_w(5.2rem,4.23rem,0.09rem);
+				background-image: url('../images/page3_02_bl_2.png');
+			}
+
+			.page3_1_t_2 {
+				.page_t(5.32rem,0.4rem);
+			}
+
+			.page3_1_w_2 {
+				.page_w(5.9rem,3.56rem,0.09rem);
+				background-image: url('../images/page3_02_bl_3.png');
+			}
+
+			.page3_1_point {
+				.page_w(3.4rem,7.71rem,8.52rem);
+				background-image: url('../images/page3_01_point.png');
+			}
+
+			.page3_1_note {
+				.page_w(6.2rem,1.52rem,1.49rem);
+				background-image: url('../images/page3_01_note.png');
+			}
+
+			.page3_1_l_coin {
+				.page_w(6.5rem,0.69rem,1.47rem);
+				left: 30%;
+				background-image: url('../images/page3_01_l_coin.png');
+			}
+
+			.page3_1_r_coin {
+				.page_w(6.2rem,0.57rem,1.2rem);
+				left: 70%;
+				background-image: url('../images/page3_01_r_coin.png');
+			}
+
+			.page3_1_c_coin {
+				.page_w(8.3rem,6.88rem,3.4rem);
+				left: 45%;
+				background-image: url('../images/page3_01_c_coin.png');
+			}
+		}
+
+		.page3_02_1 {
+			position: relative;
+
+			.page3_1_t_3 {
+				.page_t(unset,0.4rem);
+				bottom: 3.39rem;
+			}
+
+			.page3_1_w_3 {
+				.page_w(unset,6.23rem,0.09rem);
+				bottom: 3.35rem;
+				background-image: url('../images/page3_02_bl_4.png');
+			}
+
+			.page3_1_t_4 {
+				.page_t(unset,0.4rem);
+				bottom: 2.71rem;
+			}
+
+			.page3_1_w_4 {
+				.page_w(unset,4.23rem,0.09rem);
+				bottom: 2.65rem;
+				background-image: url('../images/page3_02_bl_5.png');
+			}
+
+			.invest_btn {
+				position: absolute;
+				bottom: 1.6rem;
+				left: 50%;
+				width: 5.91rem;
+				height: 1.17rem;
+				line-height: 1.17rem;
+				border-radius: 0.13rem;
+				color: #fff;
+				font-size: 0.43rem;
+				background-color: #ea0b0b;
+				transform: translateX(-50%);
+				opacity: 0;
+			}
+		}
+	}
+}
+/*第3页加载动画*/
+.third-slide.current {
+	.page3_0 {
+		.page3_01_0 {
+			.page3_0_title {
+				.page_c(0s,1.13rem);
+			}
+
+			// .page3_0_t_0 {
+			// 	.page_c(0.3s, 2.8rem);
+			// }
+            //
+			// .page3_0_t_1 {
+			// 	.page_c(0.6s, 4.25rem);
+			// }
+            //
+			// .page3_0_w_1 {
+			// 	.page_c(0.7s, 4.78rem);
+			// }
+            //
+			.page3_0_t_2 {
+				.page_c(0.3s, 3.5rem);
+			}
+
+			.page3_0_w_2 {
+				.page_c(.4s, 4rem);
+			}
+
+			.page3_0_t_3 {
+				.page_c(.6s, 5rem);
+			}
+
+			.page3_0_w_3 {
+				.page_c(.7s, 5.5rem);
+			}
+
+			.page3_0_t_4 {
+				.page_c(.9s, 5.8rem);
+			}
+
+			.page3_0_w_4 {
+				.page_c(1s, 6.3rem);
+			}
+
+			.page3_0_point {
+				.page_c(1.3s, 3.2rem);
+			}
+
+			.page3_0_note {
+				.page_c(1.6s, 7.2rem);
+			}
+
+			.page3_0_l_coin {
+				.page_c(1.9s, 7.9rem);
+			}
+
+			.page3_0_r_coin {
+				.page_c(2.2s, 7rem);
+			}
+
+			.page3_0_c_coin {
+				.page_c(2.7s, 9.2rem);
+			}
+		}
+
+		.page3_02_0 {
+			.page3_0_t_5 {
+				.page_c(3.1s, unset);
+				bottom: 2.75rem;
+			}
+
+			.page3_0_w_5 {
+				.page_c(3.2s, unset);
+				bottom: 2.68rem;
+			}
+
+			.page3_0_t_6 {
+				.page_c(3.4s, unset);
+				bottom: 2rem;
+			}
+
+			.page3_0_w_6 {
+				.page_c(3.5s, unset);
+				bottom: 1.95rem;
+			}
+		}
+	}
+
+	.page3_1 {
+		.page3_01_1 {
+			.page3_1_title {
+				.page_c(0s, 1.13rem);
+			}
+
+			.page3_1_t_0 {
+				.page_c( 0.3s, 2.89rem);
+			}
+
+			.page3_1_w_0 {
+				.page_c(0.4s, 3.45rem);
+			}
+
+			.page3_1_t_1 {
+				.page_c(0.6s,3.65rem);
+			}
+
+			.page3_1_w_1 {
+				.page_c(0.7s,4.2rem);
+			}
+
+			.page3_1_t_2 {
+				.page_c(0.9s,4.32rem);
+			}
+
+			.page3_1_w_2 {
+				.page_c(1s,4.9rem);
+			}
+
+			.page3_1_point {
+				.page_c(1.2s,2.4rem);
+			}
+
+			.page3_1_note {
+				.page_c(1.5s,5.2rem);
+			}
+
+			.page3_1_l_coin {
+				.page_c(1.7s,5.5rem);
+			}
+
+			.page3_1_r_coin {
+				.page_c(1.8s,5.2rem);
+			}
+
+			.page3_1_c_coin {
+				.page_c(2.1s,7.3rem);
+			}
+		}
+
+		.page3_02_1 {
+			.page3_1_t_3 {
+				.page_c(2.4s,unset);
+				bottom: 4.39rem;
+			}
+
+			.page3_1_w_3 {
+				.page_c(2.5s,unset);
+				bottom: 4.35rem;
+			}
+
+			.page3_1_t_4 {
+				.page_c(2.7s,unset);
+				bottom: 3.71rem;
+			}
+
+			.page3_1_w_4 {
+				.page_c(2.8s,unset);
+				bottom: 3.65rem;
+			}
+
+			.invest_btn {
+				.page_c(3s,unset);
+				bottom: 1.96rem;
+			}
+		}
+	}
+}
+/*第4页*/
+.fourth-slide {
+	.page4 {
+		width: 100%;
+		height: 100%;
+
+		.page4_01 {
+			.page4_title {
+				.page_w(2.13rem,6.17rem,1.36rem);
+				background-image: url('../images/page4_title.png');
+			}
+
+			.page4_t_0 {
+				.page_t(3.8rem,.55rem);
+
+				span {
+					.numfont();
+					font-size: 0.55rem;
+				}
+			}
+
+			.page4_t_1 {
+				.page_t(5.5rem,0.4rem);
+
+				span {
+					.numfont();
+				}
+			}
+
+			.page4_w_1 {
+				.page_w(6rem,3.17rem,.09rem);
+				background-image: url('../images/page4_01_bl_1.png');
+			}
+
+			.page4_t_2 {
+				.page_t(6.2rem,0.4rem);
+			}
+
+			.page4_w_2 {
+				.page_w(6.73rem,4.69rem,.09rem);
+				background-image: url('../images/page4_01_bl_2.png');
+			}
+
+			.page4_point {
+				.page_w(3.5rem,7.92rem,7.43rem);
+				background-image: url('../images/page4_point.png');
+			}
+
+			.page4_coin {
+				.page_w(11.2rem,1.59rem,1.21rem);
+				left: 30%;
+				background-image: url('../images/page4_coin.png');
+			}
+
+			.page4_wallet {
+				.page_w(7.5rem,4.68rem,4.88rem);
+				left: 55%;
+				background-image: url('../images/page4_wallet.png');
+			}
+		}
+
+		.page4_02 {
+			.page4_t_3 {
+				.page_t(unset,0.4rem);
+				bottom: 1rem;
+			}
+
+			.page4_w_3 {
+				.page_w(unset,5.55rem,.09rem);
+				bottom: 0.9rem;
+				background-image: url('../images/page4_01_bl_3.png');
+			}
+
+			.page4_t_4 {
+				.page_t(unset,0.4rem);
+				bottom: 0.2rem;
+			}
+
+			.page4_w_4 {
+				.page_w(unset,.92rem,.09rem);
+				bottom: 0.1rem;
+				background-image: url('../images/page4_01_bl_4.png');
+			}
+		}
+	}
+}
+/*第4页加载动画*/
+.fourth-slide.current {
+	.page4 {
+		.page4_01 {
+			.page4_title {
+				.page_c(0s,1.13rem);
+			}
+
+			.page4_t_0 {
+				.page_c(0.3s,2.8rem);
+			}
+
+			.page4_t_1 {
+				.page_c(0.6s,4.5rem);
+			}
+
+			.page4_w_1 {
+				.page_c(0.7s,5rem);
+			}
+
+			.page4_t_2 {
+				.page_c(0.9s,5.2rem);
+			}
+
+			.page4_w_2 {
+				.page_c(1s,5.73rem);
+			}
+
+			.page4_point {
+				.page_c(1.1s,2.5rem);
+			}
+
+			.page4_coin {
+				.page_c(1.5s,10.2rem);
+			}
+
+			.page4_wallet {
+				.page_c(1.2s,6.5rem);
+			}
+		}
+
+		.page4_02 {
+			.page4_t_3 {
+				.page_c(1.8s,unset);
+				bottom: 2rem;
+			}
+
+			.page4_w_3 {
+				.page_c(1.9s,unset);
+				bottom: 1.9rem;
+			}
+
+			.page4_t_4 {
+				.page_c(2.1s,unset);
+				bottom: 1.2rem;
+			}
+
+			.page4_w_4 {
+				.page_c(2.2s,unset);
+				bottom: 1.1rem;
+			}
+		}
+	}
+}
+/*第5页*/
+.fifth-slide {
+	.page5 {
+		width: 100%;
+		height: 100%;
+
+		.page5_01 {
+			.page5_title {
+				.page_w(2.13rem,6.17rem,1.36rem);
+				background-image: url('../images/page5_title.png');
+			}
+
+			.page5_t_0 {
+				.page_t(3.8rem,.55rem);
+
+				span {
+					.numfont();
+					font-size: 0.55rem;
+				}
+			}
+
+			.page5_01_0 {
+				.page5_t_1 {
+					.page_t(6.11rem,0.4rem);
+
+					span {
+						.numfont();
+					}
+				}
+
+				.page5_w_1 {
+					.page_w(6.65rem,3.17rem,.09rem);
+					background-image: url('../images/page5_01_bl_1.png');
+				}
+
+				.page5_t_2 {
+					.page_t(6.89rem,0.4rem);
+				}
+
+				.page5_w_2 {
+					.page_w(7.4rem,5.55rem,.09rem);
+					background-image: url('../images/page5_01_bl_2.png');
+				}
+
+				.page5_t_3 {
+					.page_t(7.67rem,0.4rem);
+				}
+
+				.page5_w_3 {
+					.page_w(8.22rem,3.89rem,.09rem);
+					background-image: url('../images/page5_01_bl_3.png');
+				}
+
+				.page5_tip_bg {
+					.page_w(8.9rem,6.35rem,1.27rem);
+					background-image: url('../images/page5_tip_bg.png');
+				}
+
+				.page5_tip {
+					.page_t(9.2rem,0.4rem);
+				}
+			}
+
+			.page5_01_1 {
+				.page5_t_1_1 {
+					.page_t(5.2rem,0.4rem);
+				}
+
+				.page5_w_1_1 {
+					.page_w(5.7rem,1.87rem,.09rem);
+					background-image: url('../images/page3_02_bl_1.png');
+				}
+
+				.page5_t_1_2 {
+					.page_t(5.89rem,0.4rem);
+				}
+
+				.page5_w_1_2 {
+					.page_w(6.4rem,3.89rem,.09rem);
+					background-image: url('../images/page5_01_bl_3.png');
+				}
+			}
+
+			.page5_gift {
+				.page_w(8rem,10rem,5.49rem);
+				transform: translateX(-150%);
+				background-image: url('../images/page5_bmw.png');
+				// background-image: url('../images/page5_ship.png');
+				z-index: 15;
+				opacity: 0.4;
+			}
+
+			.page5_bg {
+				.page_w(9.1rem,8.03rem,5.2rem);
+				background-image: url('../images/page5_fz.png');
+				// background-image: url('../images/page5_ship_bg.png');
+				z-index: 13;
+			}
+
+			.page5_star {
+				.page_w(unset,2.04rem,.33rem);
+				left: 80%;
+				bottom: 1.5rem;
+				background-image: url('../images/page5_star.png');
+				z-index: 16;
+			}
+
+			.page5_point {
+				.page_w(7.8rem,8.05rem,1.68rem);
+				background-image: url('../images/page5_point.png');
+				z-index: 16;
+			}
+		}
+
+		.page5_02 {
+			.page5_t_4 {
+				.page_t(unset,0.4rem);
+				bottom: 1rem;
+			}
+
+			.page5_w_4 {
+				.page_w(unset,5.59rem,.09rem);
+				bottom: 0.9rem;
+				background-image: url('../images/page5_01_bl_4.png');
+			}
+
+			.page5_t_5 {
+				.page_t(unset,0.4rem);
+				bottom: 0.2rem;
+			}
+
+			.page5_w_5 {
+				.page_w(unset,.89rem,.09rem);
+				bottom: 0.1rem;
+				background-image: url('../images/page5_01_bl_5.png');
+			}
+		}
+	}
+}
+/*第5页动态效果*/
+.fifth-slide.current {
+	.page5 {
+		.page5_01 {
+			.page5_title {
+				.page_c(0s,1.13rem);
+			}
+
+			.page5_t_0 {
+				.page_c(0.3s,2.8rem);
+			}
+
+			.page5_01_0 {
+				position: absolute;
+				top: -0.6rem;
+				left: 50%;
+				transform: translateX(-50%);
+				display: none;
+
+				.page5_t_1 {
+					.page_c(0.6s,5.11rem);
+				}
+
+				.page5_w_1 {
+					.page_c(0.7s,5.65rem);
+				}
+
+				.page5_t_2 {
+					.page_c(0.9s,5.89rem);
+				}
+
+				.page5_w_2 {
+					.page_c(1s,6.4rem);
+				}
+
+				.page5_t_3 {
+					.page_c(1.2s,6.67rem);
+				}
+
+				.page5_w_3 {
+					.page_c(1.3s,7.22rem);
+				}
+
+				.page5_tip_bg {
+					.page_c(1.9s,7.9rem);
+				}
+
+				.page5_tip {
+					.page_c(2s,8.2rem);
+				}
+			}
+
+			.page5_01_1 {
+				.page5_t_1_1 {
+					.page_c(0.7s,4.2rem);
+				}
+
+				.page5_w_1_1 {
+					.page_c(0.7s,4.7rem);
+				}
+
+				.page5_t_1_2 {
+					.page_c(0.9s,4.89rem);
+				}
+
+				.page5_w_1_2 {
+					.page_c(1s,5.4rem);
+				}
+			}
+
+			.page5_gift {
+				// .page_c(2.2s,8rem);
+				transition: all 1s;
+				transition-delay: 1.5s;
+				transform: translateX(-50%);
+				top: 8rem;
+				opacity: 1;
+			}
+
+			.page5_bg {
+				.page_c(1.9s,8.1rem);
+			}
+
+			.page5_star {
+				.page_c(2.1s,unset);
+				bottom: 2.5rem;
+			}
+
+			.page5_point {
+				.page_c(2s,6.8rem);
+			}
+		}
+	}
+
+	.page5_02 {
+		.page5_t_4 {
+			.page_c(2.3s,unset);
+			bottom: 2rem;
+		}
+
+		.page5_w_4 {
+			.page_c(2.4s,unset);
+			bottom: 1.9rem;
+		}
+
+		.page5_t_5 {
+			.page_c(2.6s,unset);
+			bottom: 1.2rem;
+		}
+
+		.page5_w_5 {
+			.page_c(2.7s,unset);
+			bottom: 1.1rem;
+		}
+	}
+}
+/*第6页*/
+.sixth-slide {
+	.page6 {
+		width: 100%;
+		height: 100%;
+
+		.page6_01 {
+			.page6_title {
+				.page_w( 2.13rem,6.21rem,1.37rem);
+				background-image: url('../images/page6_title.png');
+			}
+
+			.page6_t_0 {
+				.page_t(4.3rem,.59rem);
+
+				span {
+					.numfont();
+					font-size: 0.59rem;
+				}
+			}
+
+			.page6_t_1 {
+				.page_t(5.6rem,.4rem);
+
+				span {
+					.numfont();
+					font-size: 0.48rem;
+				}
+			}
+
+			.page6_w_1 {
+				.page_w(6.2rem,2.03rem,.09rem);
+				background-image: url('../images/page6_01_bl_1.png');
+			}
+
+			.page6_t_2 {
+				.page_t(6.4rem,.4rem);
+			}
+
+			.page6_w_2 {
+				.page_w(7rem,3.88rem,.09rem);
+				background-image: url('../images/page6_01_bl_2.png');
+			}
+			.page6_bg {
+				.page_w(8.5rem,4.56rem,4.41rem);
+				background-image: url('../images/page6_bg.png');
+			}
+			.page6_vip {
+				.page_w(7.5rem,4.56rem,4.41rem);
+				transform: translateX(-50%) scale(.1);
+				background-image: url('../images/page6_1.png');
+			}
+			.page6_v_1 {
+				.page_t(10rem,.32rem);
+				left: 17%;
+			}
+			.page6_v_2 {
+				.page_t(7.9rem,.32rem);
+			}
+			.page6_v_3 {
+				.page_t(10rem,.32rem);
+				left: 83%;
+			}
+			.page6_v_4 {
+				.page_t(13rem,.32rem);
+				left: 68%;
+			}
+			.page6_v_5 {
+				.page_t(13rem,.32rem);
+				left: 32%;
+			}
+		}
+
+		.page6_02 {}
+	}
+}
+/*第6页动态效果*/
+.sixth-slide.current {
+	.page6 {
+		.page6_01 {
+			.page6_title {
+				.page_c(0s,1.13rem);
+			}
+
+			.page6_t_0 {
+				.page_c(0.3s,3.3rem);
+			}
+
+			.page6_t_1 {
+				.page_c(0.6s,4.6rem);
+			}
+
+			.page6_w_1 {
+				.page_c(0.7s,5.2rem);
+			}
+
+			.page6_t_2 {
+				.page_c(0.9s,5.4rem);
+			}
+
+			.page6_w_2 {
+				.page_c(1s,6rem);
+			}
+			.page6_bg {
+				.page_c(1s,7.5rem);
+			}
+			.page6_vip {
+				.page_c(1.7s,7.5rem);
+				transform: translateX(-50%) scale(1);
+			}
+			.page6_v_1 {
+				.page_c(1.2s,9rem);
+			}
+			.page6_v_2 {
+				.page_c(1.3s,6.9rem);
+			}
+			.page6_v_3 {
+				.page_c(1.4s,9rem);
+			}
+			.page6_v_4 {
+				.page_c(1.5s,12rem);
+			}
+			.page6_v_5 {
+				.page_c(1.6s,12rem);
+			}
+			.page6_v {
+				color: #ea0b0b;
+			}
+		}
+
+		.page6_02 {}
+	}
+}
+/*第7页*/
+.seventh-slide {
+	.page7 {
+		width: 100%;
+		height: 100%;
+
+		.page7_01_0 {
+			.page7_0_title {
+				.page_w(2.13rem,6.28rem,1.36rem);
+				background-image: url('../images/page7_01_title.png');
+			}
+
+			.page7_0 {
+				display: none;
+				.page7_0_man {
+					.page_w(7.32rem,6.11rem,6.32rem);
+					background-image: url('../images/page7_01_man.png');
+				}
+				.page7_point {
+					.page_w(7rem,8.05rem,1.68rem);
+					background-image: url('../images/page5_point.png');
+				}
+				.page7_0_t_0 {
+					.page_t(3.73rem,0.55rem);
+
+					span {
+						.numfont();
+						font-size: 0.55rem;
+					}
+				}
+
+				.page7_0_t_1 {
+					.page_t(4.97rem,0.4rem);
+				}
+
+				.page7_0_w_1 {
+					.page_w(5.47rem,1.44rem,0.13rem);
+					background-image: url('../images/page7_01_bl_1.png');
+				}
+
+				.page7_0_t_2 {
+					.page_t(5.65rem,0.4rem);
+
+					span {
+						.numfont();
+					}
+				}
+
+				.page7_0_w_2 {
+					.page_w(6.15rem,3.88rem,0.12rem);
+					background-image: url('../images/page7_01_bl_2.png');
+				}
+
+				.page7_0_t_3 {
+					.page_t(6.4rem,0.4rem);
+
+					span {
+						.numfont();
+					}
+				}
+
+				.page7_0_w_3 {
+					.page_w(6.9rem,6.69rem,0.09rem);
+					background-image: url('../images/page7_01_bl_3.png');
+				}
+			}
+			.page7_1 {
+				// display: none;
+				.page7_1_man {
+					.page_w(6.5rem,6.11rem,6.32rem);
+					background-image: url('../images/page7_01_man.png');
+				}
+				.page7_1_point {
+					.page_w(6rem,8.05rem,1.68rem);
+					background-image: url('../images/page5_point.png');
+				}
+				.page7_1_t_0 {
+					.page_t(4.25rem,0.4rem);
+
+					span {
+						.numfont();
+						font-size: 0.55rem;
+					}
+				}
+				.page7_1_w_0 {
+					.page_w(4.75rem,1.44rem,0.13rem);
+					background-image: url('../images/page7_01_bl_1.png');
+				}
+				.page7_1_t_1 {
+					.page_t(4.97rem,0.4rem);
+				}
+
+				.page7_1_w_1 {
+					.page_w(5.47rem,3.88rem,0.12rem);
+					background-image: url('../images/page7_01_bl_2.png');
+				}
+
+				.page7_1_t_2 {
+					.page_t(5.65rem,0.4rem);
+
+					span {
+						.numfont();
+					}
+				}
+
+				.page7_1_w_2 {
+					.page_w(6.15rem,1.44rem,0.13rem);
+					background-image: url('../images/page7_01_bl_1.png');
+				}
+				.invist_btn {
+					position: absolute;
+					bottom: 1.6rem;
+					left: 50%;
+					width: 5.87rem;
+					height: 1.17rem;
+					line-height: 1.17rem;
+					border-radius: .11rem;
+					color: #fff;
+					font-size: .43rem;
+					background-color: #ea0b0b;
+					transform: translateX(-50%);
+					opacity: 0;
+				}
+			}
+		}
+
+		.page7_02_0 {
+			.page7_0_t_4 {
+				.page_t(unset,0.4rem);
+				bottom: 0.75rem;
+
+				span {
+					.numfont();
+				}
+			}
+
+			.page7_0_w_4 {
+				.page_w(unset,3.87rem,0.09rem);
+				bottom: 0.68rem;
+				background-image: url('../images/page7_01_bl_4.png');
+			}
+
+			.page7_0_t_5 {
+				.page_t(unset,0.4rem);
+				bottom: 0.1rem;
+
+				span {
+					.numfont();
+				}
+			}
+
+			.page7_0_w_5 {
+				.page_w(unset,0.93rem,0.09rem);
+				bottom: 0.05rem;
+				background-image: url('../images/page7_01_bl_5.png');
+			}
+		}
+	}
+}
+/*第7页加载动画*/
+.seventh-slide.current {
+	.page7 {
+		.page7_01_0 {
+			.page7_0_title {
+				.page_c(0s,1.13rem);
+			}
+
+			.page7_0 {
+				.page7_0_man {
+					.page_c(1.7s,6.32rem);
+				}
+				.page7_point {
+					.page_c(1.5s,6rem);
+				}
+				.page7_0_t_0 {
+					.page_c(0.3s,2.73rem);
+				}
+
+				.page7_0_t_1 {
+					.page_c(0.6s,3.97rem);
+				}
+
+				.page7_0_w_1 {
+					.page_c( 0.7s,4.47rem);
+				}
+
+				.page7_0_t_2 {
+					.page_c( 0.9s,4.65rem);
+				}
+
+				.page7_0_w_2 {
+					.page_c(1s,5.15rem);
+				}
+
+				.page7_0_t_3 {
+					.page_c(1.2s,5.4rem);
+				}
+
+				.page7_0_w_3 {
+					.page_c(1.3s,5.9rem);
+				}
+			}
+			.page7_1 {
+				.page7_1_man {
+					.page_c(1.7s,5.5rem);
+				}
+				.page7_1_point {
+					.page_c(1.5s,5rem);
+				}
+				.page7_1_t_0 {
+					.page_c(0.3s,3.25rem);
+				}
+				.page7_1_w_0 {
+					.page_c( 0.4s,3.75rem);
+				}
+				.page7_1_t_1 {
+					.page_c(0.6s,3.97rem);
+				}
+
+				.page7_1_w_1 {
+					.page_c( 0.7s,4.47rem);
+				}
+
+				.page7_1_t_2 {
+					.page_c( 0.9s,4.65rem);
+				}
+
+				.page7_1_w_2 {
+					.page_c(1s,5.15rem);
+				}
+				.invist_btn {
+					.page_c(2s,unset);
+					bottom: 2.6rem;
+				}
+			}
+
+		}
+		.page7_02_0 {
+			.page7_0_t_4 {
+				.page_c(2s,unset);
+				bottom: 1.75rem;
+			}
+
+			.page7_0_w_4 {
+				.page_c(2.1s,unset);
+				bottom: 1.68rem;
+			}
+
+			.page7_0_t_5 {
+				.page_c(2.3s,unset);
+				bottom: 1.1rem;
+			}
+
+			.page7_0_w_5 {
+				.page_c( 2.4s,unset);
+				bottom: 1.05rem;
+			}
+		}
+
+	}
+}
+/*第8页*/
+.eighth-slide {
+	.page8 {
+		width: 100%;
+		height: 100%;
+		.page8_01 {
+			.page8_title {
+				.page_w( 2.13rem,5.36rem,1.36rem);
+				background-image: url('../images/page8_title.png');
+			}
+			.page8_t_0 {
+				.page_t(4.3rem,.59rem);
+				span {
+					.numfont();
+					font-size: 0.59rem;
+				}
+			}
+			.page8_t_1 {
+				.page_t(5.6rem,.4rem);
+
+				span {
+					.numfont();
+					font-size: 0.48rem;
+				}
+			}
+
+			.page8_w_1 {
+				.page_w(6.2rem,4.45rem,.09rem);
+				background-image: url('../images/page8_01_bl_1.png');
+			}
+
+			.page8_t_2 {
+				.page_t(6.4rem,.4rem);
+			}
+
+			.page8_w_2 {
+				.page_w(7rem,3.89rem,.09rem);
+				background-image: url('../images/page8_01_bl_2.png');
+			}
+			.page8_coin_l {
+				.page_w(8.5rem,.68rem,1.41rem);
+				left: 40%;
+				background-image: url('../images/page8_coin_l.png');
+			}
+			.page8_coin_r {
+				.page_w(8rem,.57rem,1.2rem);
+				left: 65%;
+				background-image: url('../images/page8_coin_r.png');
+			}
+			.page8_coin {
+				.page_w(10rem,7.17rem,3.55rem);
+				background-image: url('../images/page8_coin.png');
+			}
+			.page8_star {
+				.page_w(7rem,1.68rem,3.83rem);
+				left: 20%;
+				background-image: url('../images/page8_star.png');
+			}
+			.page8_point {
+				.page_w(7.5rem,1.68rem,1.73rem);
+				left: 80%;
+				background-image: url('../images/page8_point.png');
+			}
+		}
+		.page8_02 {
+			.page8_t_3 {
+				.page_t(unset,0.4rem);
+				bottom: 1rem;
+			}
+
+			.page8_w_3 {
+				.page_w(unset,5rem,.09rem);
+				bottom: 0.9rem;
+				background-image: url('../images/page8_01_bl_3.png');
+			}
+
+			.page8_t_4 {
+				.page_t(unset,0.4rem);
+				bottom: 0.2rem;
+			}
+
+			.page8_w_4 {
+				.page_w(unset,3.6rem,.09rem);
+				bottom: 0.1rem;
+				background-image: url('../images/page8_01_bl_4.png');
+			}
+		}
+	}
+}
+/*第8页动态效果*/
+.eighth-slide.current {
+	.page8 {
+		.page8_01 {
+			.page8_title {
+				.page_c(0s,1.13rem);
+			}
+			.page8_t_0 {
+				.page_c(0.3s,3.3rem);
+			}
+
+			.page8_t_1 {
+				.page_c(0.6s,4.6rem);
+			}
+
+			.page8_w_1 {
+				.page_c(0.7s,5.2rem);
+			}
+
+			.page8_t_2 {
+				.page_c(0.9s,5.4rem);
+			}
+
+			.page8_w_2 {
+				.page_c(1s,6rem);
+			}
+			.page8_coin_l {
+				.page_c(1.2s,7.5rem);
+			}
+			.page8_coin_r {
+				.page_c(1.4s,7rem);
+			}
+			.page8_coin {
+				.page_c(1.6s,9rem);
+			}
+			.page8_star {
+				.page_c(1.8s,6rem);
+			}
+			.page8_point {
+				.page_c(1.9s,6.5rem);
+			}
+
+			.page8_01_0 {
+				display: none;
+			}
+			.page8_01_1 {
+				// display: none;
+			}
+		}
+		.page8_02 {
+			.page8_t_3 {
+				.page_c(2.3s,unset);
+				bottom: 2rem;
+			}
+
+			.page8_w_3 {
+				.page_c(2.4s,unset);
+				bottom: 1.9rem;
+			}
+
+			.page8_t_4 {
+				.page_c(2.6s,unset);
+				bottom: 1.2rem;
+			}
+
+			.page8_w_4 {
+				.page_c(2.7s,unset);
+				bottom: 1.1rem;
+			}
+		}
+	}
+}
+
+/*第9页*/
+.ninth-slide {
+	.page9 {
+		width: 100%;
+		height: 100%;
+		.page01{
+			.page9_title {
+				.page_w(2.13rem,7.17rem,7.04rem);
+				background-image: url('../images/page9_title.png');
+			}
+			.page9_bg {
+				.page_w(4.5rem,7.17rem,7.04rem);
+				background-image: url('../images/page9_bg.png');
+			}
+			.page9_point {
+				.page_w(3rem,8.12rem,1.01rem);
+				background-image: url('../images/page9_point.png');
+
+			}
+			.page9_round {
+				.page_w(12rem,.59rem,.57rem);
+				left: 20%;
+				background-image: url('../images/page9_round.png');
+
+			}
+			.page9_line {
+				.page_w(12rem,.83rem,.57rem);
+				left: 80%;
+				background-image: url('../images/page9_line.png');
+
+			}
+			.ctrl0 {
+				width: 1rem;
+				height: 1rem;
+				padding: .3rem;
+				// line-height: .6rem;
+				background-color: #fff;
+				border: .04rem solid #000;
+				border-radius: 50%;
+				text-align: center;
+				font-size: .4rem;
+				position: absolute;
+				transform: translateX(-50%);
+				opacity: 0;
+			}
+			.ctrl1 {
+				width: 1.6rem;
+				height: 1.6rem;
+				line-height: 1.6rem;
+				background-color: #fff;
+				border: .04rem solid #000;
+				border-radius: 50%;
+				text-align: center;
+				font-size: .4rem;
+				position: absolute;
+				transform: translateX(-50%);
+				opacity: 0;
+			}
+			.page9_ctrl0 {
+				top: 4rem;
+				left: 40%;
+			}
+			.page9_ctrl1 {
+				top: 5.5rem;
+				left: 68%;
+			}
+			.page9_ctrl2 {
+				top: 6.5rem;
+				left: 30%;
+			}
+			.page9_ctrl3 {
+				top: 7.5rem;
+				left: 60%;
+			}
+			.page9_ctrl4 {
+				top: 7rem;
+				left: 85%;
+			}
+			.page9_ctrl5 {
+				top: 10.5rem;
+				left: 35%;
+			}
+			.page9_ctrl6 {
+				top: 8.5rem;
+				left: 22%;
+			}
+			.page9_ctrl7 {
+				top: 10rem;
+				left: 65%;
+			}
+		}
+		.page02{
+			.page9_t_0 {
+				.page_t(unset,0.4rem);
+				bottom: 0.2rem;
+			}
+			.page9_w_0 {
+				.page_w(unset,3.6rem,.09rem);
+				bottom: 0.1rem;
+				background-image: url('../images/page9_01_bl_1.png');
+			}
+		}
+	}
+}
+/*第9页动态效果*/
+.ninth-slide.current {
+	.page9 {
+		.page01{
+			.page9_title {
+				.page_c(0s,1.13rem);
+			}
+			.page9_bg {
+				.page_c(.3s,3.5rem);
+			}
+			.page9_point {
+				.page_c(.4s,2rem);
+			}
+			.page9_round {
+				.page_c(1s,11rem);
+			}
+			.page9_line {
+				.page_c(1.2s,11rem);
+			}
+			.page9_ctrl0 {
+				.page_c(.6s,3rem);
+			}
+			.page9_ctrl1 {
+				.page_c(.7s,4.5rem);
+			}
+			.page9_ctrl2 {
+				.page_c(.9s,5.5rem);
+			}
+			.page9_ctrl3 {
+				.page_c(1.1s,6.5rem);
+			}
+			.page9_ctrl4 {
+				.page_c(1.3s,6rem);
+			}
+			.page9_ctrl5 {
+				.page_c(1.5s,9.5rem);
+			}
+			.page9_ctrl6 {
+				.page_c(1.7s,7.5rem);
+			}
+			.page9_ctrl7 {
+				.page_c(1.9s,9rem);
+			}
+		}
+		.page02{
+			.page9_t_0 {
+				.page_c(2.1s,unset);
+				bottom: 1.2rem;
+			}
+
+			.page9_w_0 {
+				.page_c(2.2s,unset);
+				bottom: 1.1rem;
+			}
+		}
+	}
+}
+/*第10页*/
+.tenth-slide {
+	.page10 {
+		.page10_01 {
+			.page10_title {
+				.page_w(2.13rem,8.83rem,1.36rem);
+				background-image: url('../images/page10_title.png');
+			}
+			.page10_t_0 {
+				.page_t(4.3rem,.59rem);
+				span {
+					.numfont();
+					font-size: 0.59rem;
+				}
+			}
+			.page10_t_1 {
+				.page_t(5.6rem,.4rem);
+				span {
+					.numfont();
+					font-size: 0.48rem;
+				}
+			}
+
+			.page10_w_1 {
+				.page_w(6.15rem,2.76rem,.09rem);
+				background-image: url('../images/page10_01_bl_1.png');
+			}
+
+			.page10_01_00 {
+				.page10_00_atm {
+					.page_w(6.9rem,5.13rem, 4.39rem);
+					left: 40%;
+					background-image: url('../images/page10_atm.png');
+				}
+				.page10_00_magnet {
+					.page_w(8.5rem,1.99rem, 1.8rem);
+					left: 72%;
+					background-image: url('../images/page10_magnet.png');
+				}
+				.invest_btn2 {
+					position: absolute;
+					bottom: 1.7rem;
+					left: 50%;
+					width: 5.91rem;
+					height: 1.17rem;
+					line-height: 1.17rem;
+					border-radius: 0.13rem;
+					color: #fff;
+					font-size: 0.43rem;
+					background-color: #000;
+					transform: translateX(-50%);
+					opacity: 0;
+				}
+			}
+			.page10_01_01 {
+				.page10_t_2 {
+					.page_t(6.3rem,.4rem);
+					span {
+						.numfont();
+					}
+				}
+				.page10_w_2 {
+					.page_w(6.8rem,5.31rem,.09rem);
+					background-image: url('../images/page10_01_bl_2.png');
+				}
+				.page10_t_3 {
+					.page_t(7rem,0.4rem);
+					span {
+						.numfont();
+					}
+				}
+
+				.page10_w_3 {
+					.page_w(7.5rem,4.73rem,.09rem);
+					background-image: url('../images/page10_01_bl_3.png');
+				}
+				.page10_t_4 {
+					.page_t(7.72rem,0.4rem);
+					span {
+						.numfont();
+					}
+				}
+				.page10_w_4 {
+					.page_w(8.22rem,3.88rem, 0.09rem);
+					background-image: url('../images/page10_01_bl_4.png');
+				}
+				.page10_01_atm {
+					.page_w(8.6rem,5.13rem, 4.39rem);
+					left: 40%;
+					background-image: url('../images/page10_atm.png');
+				}
+				.page10_01_magnet {
+					.page_w(10.2rem,1.99rem, 1.8rem);
+					left: 72%;
+					background-image: url('../images/page10_magnet.png');
+				}
+			}
+		}
+		.page10_02 {
+			.invist_btn2 {
+				position: absolute;
+				bottom: 0.2rem;
+				left: 50%;
+				width: 5.91rem;
+				height: 1.17rem;
+				line-height: 1.17rem;
+				border-radius: 0.13rem;
+				color: #fff;
+				font-size: 0.43rem;
+				background-color: #ea0b0b;
+				transform: translateX(-50%);
+				opacity: 0;
+			}
+		}
+	}
+}
+/*第10页动态效果*/
+.tenth-slide.current {
+	.page10 {
+		.page10_01 {
+			.page10_title {
+				.page_c(0s,1.13rem);
+			}
+			.page10_t_0 {
+				.page_c(0.3s,3.3rem);
+			}
+			.page10_t_1 {
+				.page_c(0.6s,4.6rem);
+			}
+
+			.page10_w_1 {
+				.page_c(0.7s,5.15rem);
+			}
+			.page10_01_00 {
+				// display: none;
+				.page10_00_atm {
+					.page_c(1s,5.9rem);
+				}
+				.page10_00_magnet {
+					.page_c(1.3s,7.5rem);
+				}
+				.invest_btn2 {
+					.page_c(1.7s,unset);
+					bottom: 2.7rem;
+				}
+			}
+			.page10_01_01 {
+				display: none;
+				.page10_t_2 {
+					.page_c(0.9s,5.3rem);
+				}
+				.page10_w_2 {
+					.page_c(1s,5.8rem);
+				}
+				.page10_t_3 {
+					.page_c(1.2s,6rem);
+				}
+
+				.page10_w_3 {
+					.page_c(1.3s,6.5rem);
+				}
+				.page10_t_4 {
+					.page_c(1.5s,6.72rem);
+				}
+				.page10_w_4 {
+					.page_c(1.6s,7.22rem);
+				}
+				.page10_01_atm {
+					.page_c(1.8s,7.6rem);
+				}
+				.page10_01_magnet {
+					.page_c(2s,9.2rem);
+				}
+			}
+		}
+		.page10_02 {
+			.invist_btn2 {
+				.page_c(2.2s,unset);
+				bottom: 1.2rem;
+			}
+		}
+	}
+}
+
+.musicbtn {
+	display: block;
+	position: fixed;
+	top: 0.11rem;
+	right: 0.11rem;
+	width: 1rem;
+	height: 1rem;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../images/m1.png');
+	z-index: 99;
+	// animation: rot 5s linear infinite normal;
+}
+.play {
+	animation: rot 5s linear infinite normal;
+}
+
+.arr {
+	position: fixed;
+	top: unset!important;
+	bottom: 0.4rem!important;
+	left: 50%;
+	margin-left: -.325rem;
+	width: 0.65rem;
+	height: 0.35rem;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-image: url('../images/arr.png');
+	z-index: 99;
+	animation: updown 2s linear alternate infinite;
+	opacity: 1;
+}
+/*音乐图标动画*/
+@keyframes rot {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/*小箭头动画*/
+@keyframes updown {
+	0% {
+		opacity: 0.1;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+/*星星闪烁*/
+@keyframes twinkle {
+	from {
+		transform: scale(.5);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
